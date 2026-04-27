@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: index.php");
 }
 ?>
-
+<link rel="stylesheet" href="style.css">
 <form method="POST">
     <input type="text" name="name" value="<?= $student['name'] ?>">
     <input type="email" name="email" value="<?= $student['email'] ?>">

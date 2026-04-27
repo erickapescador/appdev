@@ -5,10 +5,20 @@ $stmt = $pdo->query("SELECT * FROM students");
 $students = $stmt->fetchAll();
 ?>
 
+<link rel="stylesheet" href="style.css">
+
+<!-- Add Student Button -->
+<a href="create.php" class="add-btn">+ Add Student</a>
+
 <table border="1">
     <tr>
-        <th>ID</th><th>Name</th><th>Email</th><th>Course</th><th>Actions</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Actions</th>
     </tr>
+
     <?php foreach ($students as $s): ?>
     <tr>
         <td><?= $s['id'] ?></td>
